@@ -3,8 +3,8 @@
 Inside the initial-state, you can set the desired number of floors and elevators, the default is 1 elevator and 5 floors
 
 ```bash
-    elevators: 1
-    floors: 5
+elevators: 1
+floors: 5
 ```
 
 ## Setup
