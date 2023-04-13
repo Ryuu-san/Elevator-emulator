@@ -41,12 +41,16 @@
     }
 
     watch(props.shaft, ()=>{
-        setTimeout(()=>{
-            changeStyleShaft();
-        }, 10)
+        if(document.readyState !== 'complete') return;
+        changeStyleShaft();
     })
 
+    const processLoad = () =>{
+        changeStyleShaft();
+    }
+
     onMounted(()=>{
+        window.addEventListener("load", () => processLoad());
         emit('autoRunFloor');
     })
 </script>
