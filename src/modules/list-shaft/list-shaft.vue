@@ -27,6 +27,7 @@
     const elevatorRound = computed(() => store.state.elevator.elevatorRound);
     
     watch(elevatorRound, () =>{
+        if(document.readyState !== 'complete') return;
         autoRunFloor();
     }, {deep: true})
 
@@ -82,8 +83,6 @@
     }
 
     const startElevator = (shaft, floor) =>{
-        const elevator = document.querySelector('.elevator[data-id="'+ shaft.id +'"]');
-        if(!elevator) return;
         store.commit('elevator/setElevatorStatusChange', [shaft, floor]);
     }
 

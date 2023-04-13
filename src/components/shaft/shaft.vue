@@ -45,12 +45,8 @@
         changeStyleShaft();
     })
 
-    const processLoad = () =>{
-        changeStyleShaft();
-    }
-
     onMounted(()=>{
-        window.addEventListener("load", () => processLoad());
+        window.addEventListener("load", () => changeStyleShaft());
         emit('autoRunFloor');
     })
 </script>
