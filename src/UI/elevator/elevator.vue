@@ -32,7 +32,6 @@
         min-width: 20px;
         height: 100px;
         background-color: #03feff;
-        transform: translateY(0%);
         transition-timing-function: linear;
         
         &.elevator__relaxation{
